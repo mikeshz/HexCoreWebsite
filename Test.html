@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+    <img src="logo.png"alt="logo">
+    <a href="map.html" alt="enter"><h2>enter</h2></a>
+
+<!--
+    <div id = "legend">
+        <div id = "love" style= float: left; padding: 15px; margin: 15px; width: 50px; height: 60px;><H1>love</H1></div>
+        <div id = "anger" style= float: left; padding: 15px; margin: 15px; width: 50px; height: 60px;><H1>anger</H1></div>
+        <div id = "surprise" style= float: left; padding: 15px; margin: 15px; width: 50px; height: 60px;><H1>surprise</H1></div>
+        <div id = "happiness" style= float: left; padding: 15px; margin: 15px; width: 50px; height: 60px;><h1>happiness</h1></div>
+        <div id = "sadness" style= float: left; padding: 15px; margin: 15px; width: 50px; height: 60px;><H1>sadness</H1></div>
+        <div id = "fear" style= float: left; padding: 15px; margin: 15px; width: 50px; height: 60px;><H1>fear</H1></div>
+    </div>
+-->
+
+    <script src="jquery-2.2.0.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRgQydJc-KFziWmS8AVeNk_9kdN6_OIFc&callback=initMap"></script>
+    <script type='text/javascript'>
+
+        var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -34.397, lng: 150.644},
+                    zoom: 8
+                    });
+                }
+        
+        var loc = "Canada";
+        var hashtag1 = "apple";
+        var hashtag2 = "banana";
+        var hashtag3 = "orange";
+        var hashtag4 = "pear";
+        var hashtag5 = "guava";
+
+        var canadaLink = $('#canada');
+        var domain = "https://subdomain.domain.com/?";
+        var queryString = loc + "," + hashtag1 + "," + hashtag2 + "," + hashtag3 + "," + hashtag4 + "," + hashtag5;
+        canadaLink.attr("href", domain + queryString);
+
+    </script>
+    </body>
+</html>

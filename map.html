@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var ottawa=new google.maps.LatLng(45.6319,-75.5114);
+var washington=new google.maps.LatLng(38.9047,-77.0164);
+var london=new google.maps.LatLng(51.5072,0.1275);
+var johannesburg=new google.maps.LatLng(26.2044,28.0456);
+var sydney=new google.maps.LatLng(-33.8650,151.2094);
+function initialize()
+{
+var ottawaDot = {
+  center:ottawa,
+  zoom:3,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+    var washingtonDot = {
+  center:washington,
+  zoom:3,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+    var londonDot = {
+  center:london,
+  zoom:3,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+    var johannesburgDot = {
+  center:johannesburg,
+  zoom:3,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+    var sydneyDot = {
+  center:sydney,
+  zoom:3,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var ottawaMap = new google.maps.Map(document.getElementById("googleMap"),ottawaDot);
+var washingtonMap = google.maps.Map(document.getElementById("googleMap"),washingtonDot);
+var londonMap = google.maps.Map(document.getElementById("googleMap"),londonDot);
+var johannesburgMap = google.maps.Map(document.getElementById("googleMap"),johannesburgDot);
+var sydneyMap = google.maps.Map(document.getElementById("googleMap"),sydneyDot);
+
+var ottawaCity = new google.maps.Circle({
+  center:ottawa,
+  radius:150000,
+  strokeWeight:0,
+  fillColor:"#7d3146",
+  fillOpacity:0.4
+  });
+var washingtonCity = new google.maps.Circle({
+  center:washington,
+  radius:150000,
+  strokeWeight:0,
+  fillColor:"#7d3146",
+  fillOpacity:0.4
+  });
+var londonCity = new google.maps.Circle({
+  center:london,
+  radius:150000,
+  strokeWeight:0,
+  fillColor:"#7d3146",
+  fillOpacity:0.4
+  });
+var johannesburgCity = new google.maps.Circle({
+  center:johannesburg,
+  radius:150000,
+  strokeWeight:0,
+  fillColor:"#7a5678",
+  fillOpacity:0.4
+  });
+var sydneyCity = new google.maps.Circle({
+  center:sydney,
+  radius:150000,
+  strokeWeight:0,
+  fillColor:"#424268",
+  fillOpacity:0.4
+  });
+initialize();
+ottawaCity.setMap(ottawaMap);
+//washingtonCity.setMap(washingtonMap);
+//londonCity.setMap(londonMap);
+//johannesburgCity.setMap(johannesburgMap);
+//sydneyCity.setMap(sydneyMap);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<style>
+     #googleMap { height: 100%; 
+                -webkit-filter: grayscale(70%);
+                -moz-filter: grayscale(100%);
+    </style>
+    </head>
+
+<body style="background-color:#1d1d1d;">
+<div id="googleMap" style="width:2700px; height:730px; margin-top:90px"></div>
+</body>
+</html>
